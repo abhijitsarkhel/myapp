@@ -3,32 +3,29 @@
 <html>
 <head>
 <title>Please login</title>
+<link rel="stylesheet" href="static/css/login-style.css">
 </head>
 <body>
-	<form:form commandName="user">
-		<table>
-			<tr>
-				<td>Username:</td>
-				<td><form:input path="email" /></td>
-			</tr>
-			<tr>
-				<td>Password:</td>
-				<td><form:password path="password" /></td>
-			</tr>
-			<tr>
-				<td colspan="2"><input type="submit" value="Login"></td>
-			</tr>
-			<tr>
-				<td colspan="2"><a href="register.page">register</a></td>
-			</tr>
-			<tr>
-				<td colspan="2">
-					<p>
-						Note: Your username will be your email-id.
-					</p>
-				</td>
-			</tr>
-		</table>
-	</form:form>
+	<div class="login">
+		<div class="heading">
+			<h2>Sign in</h2>
+			<form:form commandName="user">
+				<div class="input-group input-group-lg">
+					<span class="input-group-addon"><i class="fa fa-user"></i></span>
+					<form:input path="email" class="form-control" placeholder="email" />
+				</div>
+
+				<div class="input-group input-group-lg">
+					<span class="input-group-addon"><i class="fa fa-lock"></i></span>
+					<form:password path="password" class="form-control"
+						placeholder="Password" />
+				</div>
+				<button type="submit" class="float">Login</button>
+				<div class="input-group input-group-lg">
+					<a href="register.page">New user? register here</a>
+				</div>
+			</form:form>
+		</div>
+	</div>
 </body>
 </html>
