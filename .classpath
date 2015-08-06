@@ -3,6 +3,7 @@
   <classpathentry kind="src" path="src/main/java" including="**/*.java"/>
   <classpathentry kind="output" path="target/myapp-1.0-SNAPSHOT/WEB-INF/classes"/>
   <classpathentry kind="var" path="M2_REPO/javax/servlet/servlet-api/2.5/servlet-api-2.5.jar"/>
+  <classpathentry kind="var" path="M2_REPO/javax/validation/validation-api/1.1.0.Final/validation-api-1.1.0.Final.jar"/>
   <classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
   <classpathentry kind="var" path="M2_REPO/com/google/appengine/appengine-api-1.0-sdk/1.9.24/appengine-api-1.0-sdk-1.9.24.jar"/>
   <classpathentry kind="var" path="M2_REPO/jstl/jstl/1.2/jstl-1.2.jar"/>
@@ -17,6 +18,10 @@
   <classpathentry kind="var" path="M2_REPO/org/springframework/spring-webmvc/4.2.0.RELEASE/spring-webmvc-4.2.0.RELEASE.jar"/>
   <classpathentry kind="var" path="M2_REPO/com/googlecode/objectify/objectify/5.1.5/objectify-5.1.5.jar"/>
   <classpathentry kind="var" path="M2_REPO/com/google/guava/guava/18.0/guava-18.0.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/hibernate/hibernate-validator/5.2.1.Final/hibernate-validator-5.2.1.Final.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/jboss/logging/jboss-logging/3.2.1.Final/jboss-logging-3.2.1.Final.jar"/>
+  <classpathentry kind="var" path="M2_REPO/com/fasterxml/classmate/1.1.0/classmate-1.1.0.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/slf4j/slf4j-api/1.7.12/slf4j-api-1.7.12.jar"/>
   <classpathentry kind="var" path="M2_REPO/com/google/appengine/appengine-testing/1.9.24/appengine-testing-1.9.24.jar"/>
   <classpathentry kind="var" path="M2_REPO/com/google/appengine/appengine-api-stubs/1.9.24/appengine-api-stubs-1.9.24.jar"/>
 </classpath>

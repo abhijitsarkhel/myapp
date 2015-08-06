@@ -27,24 +27,29 @@
 						<form:label path="firstName">First Name</form:label>
 						<form:input path="firstName" spellcheck="false"
 							placeholder="FirstName" />
+						<form:errors path="firstName" cssClass="error"/>
 					</div>
 					<div>
 						<form:label path="lastName">First Name</form:label>
 						<form:input path="lastName" spellcheck="false"
 							placeholder="LastName" />
+						<form:errors path="lastName" cssClass="error"/>
 					</div>
 					<div>
 						<form:label path="email">Email</form:label>
 						<form:input path="email" spellcheck="false"
 							placeholder="xyz@xyz.com" />
+						<form:errors path="email" cssClass="error"/>
 					</div>
 					<div>
 						<form:label path="password">Password</form:label>
 						<form:password path="password" />
+						<form:errors path="password" cssClass="error"/>
 					</div>
 					<div>
 						<form:label path="confirm">Confirm Password</form:label>
 						<form:password path="confirm" />
+						<form:errors path="confirm" cssClass="error"/>
 					</div>
 					<div>
 						<label></label> <input type="submit" value="Register"

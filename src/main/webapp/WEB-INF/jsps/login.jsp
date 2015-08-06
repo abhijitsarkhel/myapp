@@ -13,12 +13,13 @@
 				<div class="input-group input-group-lg">
 					<span class="input-group-addon"><i class="fa fa-user"></i></span>
 					<form:input path="email" class="form-control" placeholder="email" />
+					<form:errors path="email" cssClass="error"/>
 				</div>
-
 				<div class="input-group input-group-lg">
 					<span class="input-group-addon"><i class="fa fa-lock"></i></span>
 					<form:password path="password" class="form-control"
 						placeholder="Password" />
+					<form:errors path="password" cssClass="error"/>
 				</div>
 				<button type="submit" class="float">Login</button>
 				<div class="input-group input-group-lg">

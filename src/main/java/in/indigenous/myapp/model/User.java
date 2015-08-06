@@ -5,11 +5,12 @@ import com.googlecode.objectify.annotation.Id;
 
 @Entity
 public class User {
+
 	private String firstName;
 	private String lastName;
-	@Id private String email;
+	@Id
+	private String email;
 	private String password;
-	private String confirm;
 
 	public String getFirstName() {
 		return firstName;
@@ -41,14 +42,6 @@ public class User {
 
 	public void setPassword(String password) {
 		this.password = password;
-	}
-
-	public String getConfirm() {
-		return confirm;
-	}
-
-	public void setConfirm(String confirm) {
-		this.confirm = confirm;
 	}
 
 }

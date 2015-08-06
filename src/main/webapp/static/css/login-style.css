@@ -161,3 +161,8 @@ body, input, button {
     min-height: 0;
   }
 }
+.error {
+    color: #ff0000;
+    font-style: italic;
+    font-weight: bold;
+}

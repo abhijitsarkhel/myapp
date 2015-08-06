@@ -1,10 +1,11 @@
 package in.indigenous.myapp.services;
 
-import in.indigenous.myapp.model.User;
+import in.indigenous.myapp.forms.beans.LoginFormBean;
+import in.indigenous.myapp.forms.beans.RegistrationFormBean;
 
 public interface UserService {
 
-	public boolean register(User user);
+	public boolean register(RegistrationFormBean user);
 
-	public boolean login(User user);
+	public boolean login(LoginFormBean user);
 }

@@ -7,8 +7,11 @@
 	  http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.2.xsd
 	  http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd">
 
+	<context:annotation-config />
 	<context:component-scan base-package="in.indigenous.myapp.controllers" />
-
+	<context:component-scan base-package="in.indigenous.myapp.services.impl" />
+	<context:component-scan base-package="in.indigenous.myapp.daos.impl" />
+	<context:component-scan base-package="in.indigenous.myapp.forms.validators" />
 	<mvc:annotation-driven />
 
 	<bean
