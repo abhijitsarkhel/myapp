@@ -12,11 +12,20 @@
 	<context:component-scan base-package="in.indigenous.myapp.services.impl" />
 	<context:component-scan base-package="in.indigenous.myapp.daos.impl" />
 	<context:component-scan base-package="in.indigenous.myapp.forms.validators" />
+
 	<mvc:annotation-driven />
 
 	<bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="prefix" value="/WEB-INF/jsps/" />
 		<property name="suffix" value=".jsp" />
+	</bean>
+
+	<mvc:resources mapping="/resources/**" location="/static/properties/" />
+
+	<bean id="messageSource"
+		class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+		<property name="basename" value="classpath:message" />
+		<property name="defaultEncoding" value="UTF-8" />
 	</bean>
 </beans>

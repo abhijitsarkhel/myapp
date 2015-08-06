@@ -6,6 +6,9 @@
 <link rel="stylesheet" href="static/css/login-style.css">
 </head>
 <body>
+	<div class="message">
+		${message}
+	</div>
 	<div class="login">
 		<div class="heading">
 			<h2>Sign in</h2>

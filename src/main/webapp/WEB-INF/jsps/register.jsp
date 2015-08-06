@@ -18,6 +18,9 @@
 </script>
 </head>
 <body>
+	<div class="message">
+		${message}
+	</div>
 	<div class="main">
 		<div class="two">
 			<div class="register">

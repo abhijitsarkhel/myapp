@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 @Controller
 public class LoginPageController {
@@ -38,18 +39,18 @@ public class LoginPageController {
 	@RequestMapping(value = "login", method = RequestMethod.POST)
 	public String login(Model model,
 			@ModelAttribute("user") @Validated LoginFormBean user,
-			BindingResult bindingResult) {
-		//loginFormValidator.validate(user, bindingResult);
+			BindingResult bindingResult, RedirectAttributes redirectAttributes) {
+		// loginFormValidator.validate(user, bindingResult);
 		if (bindingResult.hasErrors()) {
 			model.addAttribute("user", user);
 			return "login";
 		}
 		boolean success = userService.login(user);
 		if (success) {
-			// TODO - Add success message.
+			redirectAttributes.addFlashAttribute("message", "You are successfully logged in.");
 			return "redirect:home.page";
 		} else {
-			// TODO - Add failure message.
+			model.addAttribute("message", "Login failed");
 			return "login";
 		}
 	}

@@ -1,7 +1,12 @@
+in\indigenous\myapp\controllers\LoginPageController.class
 in\indigenous\myapp\model\User.class
+in\indigenous\myapp\forms\beans\LoginFormBean.class
 in\indigenous\myapp\daos\UserDao.class
 in\indigenous\myapp\listeners\ObjectifyHelper.class
 in\indigenous\myapp\forms\validators\RegistrationFormValidator.class
 in\indigenous\myapp\services\impl\UserServiceImpl.class
+in\indigenous\myapp\forms\beans\RegistrationFormBean.class
+in\indigenous\myapp\forms\validators\LoginFormValidator.class
+in\indigenous\myapp\controllers\RegistrationPageController.class
 in\indigenous\myapp\daos\impl\UserDaoImpl.class
 in\indigenous\myapp\services\UserService.class

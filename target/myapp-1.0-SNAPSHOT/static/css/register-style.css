@@ -165,3 +165,6 @@ body {
     font-style: italic;
     font-weight: bold;
 }
+.message {
+	color: #b3eecc;
+}
