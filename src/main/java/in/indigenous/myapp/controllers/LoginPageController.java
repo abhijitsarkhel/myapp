@@ -3,6 +3,8 @@ package in.indigenous.myapp.controllers;
 import in.indigenous.myapp.forms.beans.LoginFormBean;
 import in.indigenous.myapp.services.UserService;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -25,6 +27,8 @@ public class LoginPageController {
 	@Autowired
 	private Validator loginFormValidator;
 
+	private static final Logger LOGGER = LoggerFactory.getLogger(LoginPageController.class);
+
 	@InitBinder
 	private void initBinder(WebDataBinder binder) {
 		binder.setValidator(loginFormValidator);
@@ -32,6 +36,7 @@ public class LoginPageController {
 
 	@RequestMapping(value = "login", method = RequestMethod.GET)
 	public String showLoginPage(Model model) {
+		LOGGER.info("Into showLoginPage method.");
 		model.addAttribute("user", new LoginFormBean());
 		return "login";
 	}
@@ -40,6 +45,7 @@ public class LoginPageController {
 	public String login(Model model,
 			@ModelAttribute("user") @Validated LoginFormBean user,
 			BindingResult bindingResult, RedirectAttributes redirectAttributes) {
+		LOGGER.info("Into login method.");
 		// loginFormValidator.validate(user, bindingResult);
 		if (bindingResult.hasErrors()) {
 			model.addAttribute("user", user);
@@ -47,9 +53,11 @@ public class LoginPageController {
 		}
 		boolean success = userService.login(user);
 		if (success) {
+			LOGGER.debug("Login success for user " + user.getEmail());
 			redirectAttributes.addFlashAttribute("message", "You are successfully logged in.");
 			return "redirect:home.page";
 		} else {
+			LOGGER.warn("Login failed for user " + user.getEmail());
 			model.addAttribute("message", "Login failed");
 			return "login";
 		}
